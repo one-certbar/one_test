@@ -20,8 +20,8 @@
 3. When the app will run successfully,
        - One user with Admin role,
 	   # Default Admin credentials
-	   **email** : Kailyn.Beer22@yahoo.com
-	   **password** : eCtsw_VamUWoSqg
+	   **email** : Clovis29@yahoo.com
+	   **password** : CYB5n5Hu8yI8kMU
 
 
 ## How to run with Docker ? :

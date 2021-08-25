@@ -238,12 +238,12 @@ async function seedRouteRole () {
 }
 async function seedUserRole (){
   let admin = await User.findOne({
-    'email':'Kailyn.Beer22@yahoo.com',
+    'email':'Clovis29@yahoo.com',
     'isActive':true,
     'isDeleted':false
   });
   let adminRole = await Role.findOne({ code: 'SYSTEM_USER' }, { id: 1 });
-  if (admin && admin.isPasswordMatch('eCtsw_VamUWoSqg') && adminRole){
+  if (admin && admin.isPasswordMatch('CYB5n5Hu8yI8kMU') && adminRole){
     let count = await UserRole.countDocuments({
       userId: admin.id,
       roleId: adminRole.id,
@@ -261,14 +261,14 @@ async function seedUserRole (){
 }
 async function seedUser () {
   let admin = await User.findOne({
-    'email':'Kailyn.Beer22@yahoo.com',
+    'email':'Clovis29@yahoo.com',
     'isActive':true,
     'isDeleted':false
   });
-  if (!admin || !admin.isPasswordMatch('eCtsw_VamUWoSqg') ) {
+  if (!admin || !admin.isPasswordMatch('CYB5n5Hu8yI8kMU') ) {
     let admin = new User({
-      'password':'eCtsw_VamUWoSqg',
-      'email':'Kailyn.Beer22@yahoo.com',
+      'password':'CYB5n5Hu8yI8kMU',
+      'email':'Clovis29@yahoo.com',
       'role':1
     });
     await User.create(admin);
