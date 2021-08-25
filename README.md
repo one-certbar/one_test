@@ -18,10 +18,10 @@
 2. execute server:
     ```$ npm start```
 3. When the app will run successfully,
-       - One user with User role,
-	   # Default User credentials
-	   **email** : Gonzalo0@yahoo.com
-	   **password** : XjQ6XSZgmcaTOeD
+       - One user with Admin role,
+	   # Default Admin credentials
+	   **email** : Kailyn.Beer22@yahoo.com
+	   **password** : eCtsw_VamUWoSqg
 
 
 ## How to run with Docker ? :

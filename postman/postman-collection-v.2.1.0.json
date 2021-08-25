@@ -1,0 +1,1968 @@
+{
+  "info": {
+    "name": "one_test",
+    "_postman_id": "6c235f76-6c49-40e9-bf75-5d47bac92c3c",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "client",
+      "description": "client APIs",
+      "item": [
+        {
+          "name": "Blog",
+          "description": "Blog Model APIs",
+          "item": [
+            {
+              "name": "getBlog",
+              "request": {
+                "url": {
+                  "raw": "{{url}}client/api/v1/blog/:id",
+                  "host": [
+                    "{{url}}client"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "blog",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "getBlog_response",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}client/api/v1/blog/:id",
+                      "host": [
+                        "{{url}}client"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "blog",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"Director\",\n    \"alternativeHeadline\": \"vortals\",\n    \"image\": \"feed\",\n    \"publishDate\": \"Account\",\n    \"author\": {\n      \"name\": \"Denise Okuneva\",\n      \"image\": \"indexing\",\n      \"email\": \"Dangelo_Breitenberg28@gmail.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Rose Funk\",\n      \"url\": \"SMS\",\n      \"logo\": \"withdrawal\"\n    },\n    \"articleSection\": \"red\",\n    \"articleBody\": \"Enterprise-wide\",\n    \"description\": \"evolve\",\n    \"slug\": \"Rapid\",\n    \"url\": \"Customizable\",\n    \"isDraft\": true,\n    \"addedby\": \"612650cc3dfbcf0a116af44e\",\n    \"id\": \"612650cc3dfbcf0a116af452\",\n    \"_id\": \"612650cc3dfbcf0a116af452\",\n    \"createdAt\": \"2022-05-08T12:36:01.720Z\",\n    \"updatedAt\": \"2022-04-14T17:15:38.973Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "addBlog",
+              "request": {
+                "url": {
+                  "raw": "{{url}}client/api/v1/blog/create",
+                  "host": [
+                    "{{url}}client"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "blog",
+                    "create"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"title\": \"Director\",\n  \"alternativeHeadline\": \"vortals\",\n  \"image\": \"feed\",\n  \"publishDate\": \"Account\",\n  \"author\": {\n    \"name\": \"Denise Okuneva\",\n    \"image\": \"indexing\",\n    \"email\": \"Dangelo_Breitenberg28@gmail.com\"\n  },\n  \"publisher\": {\n    \"name\": \"Rose Funk\",\n    \"url\": \"SMS\",\n    \"logo\": \"withdrawal\"\n  },\n  \"articleSection\": \"red\",\n  \"articleBody\": \"Enterprise-wide\",\n  \"description\": \"evolve\",\n  \"slug\": \"Rapid\",\n  \"url\": \"Customizable\",\n  \"isDraft\": true,\n  \"addedby\": \"612650cc3dfbcf0a116af44e\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "addBlog_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}client/api/v1/blog/create",
+                      "host": [
+                        "{{url}}client"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "blog",
+                        "create"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"Director\",\n    \"alternativeHeadline\": \"vortals\",\n    \"image\": \"feed\",\n    \"publishDate\": \"Account\",\n    \"author\": {\n      \"name\": \"Denise Okuneva\",\n      \"image\": \"indexing\",\n      \"email\": \"Dangelo_Breitenberg28@gmail.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Rose Funk\",\n      \"url\": \"SMS\",\n      \"logo\": \"withdrawal\"\n    },\n    \"articleSection\": \"red\",\n    \"articleBody\": \"Enterprise-wide\",\n    \"description\": \"evolve\",\n    \"slug\": \"Rapid\",\n    \"url\": \"Customizable\",\n    \"isDraft\": true,\n    \"addedby\": \"612650cc3dfbcf0a116af44e\",\n    \"id\": \"612650cc3dfbcf0a116af450\",\n    \"_id\": \"612650cc3dfbcf0a116af450\",\n    \"createdAt\": \"2022-02-10T12:05:59.214Z\",\n    \"updatedAt\": \"2022-01-20T11:05:20.265Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "findAllBlog",
+              "request": {
+                "url": {
+                  "raw": "{{url}}client/api/v1/blog/list",
+                  "host": [
+                    "{{url}}client"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "blog",
+                    "list"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": {},\n  \"options\": {\n    \"select\": [\n      \"field 1\",\n      \"field 2\"\n    ],\n    \"collation\": \"\",\n    \"sort\": \"\",\n    \"populate\": \"\",\n    \"projection\": \"\",\n    \"lean\": false,\n    \"leanWithId\": true,\n    \"offset\": 0,\n    \"page\": 1,\n    \"limit\": 10,\n    \"customLabels\": {},\n    \"pagination\": true,\n    \"useEstimatedCount\": false,\n    \"useCustomCountFn\": false,\n    \"forceCountFn\": false,\n    \"read\": {},\n    \"options\": {}\n  },\n  \"isCountOnly\": false\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "findAllBlog_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}client/api/v1/blog/list",
+                      "host": [
+                        "{{url}}client"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "blog",
+                        "list"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"title\": \"Director\",\n        \"alternativeHeadline\": \"vortals\",\n        \"image\": \"feed\",\n        \"publishDate\": \"Account\",\n        \"author\": {\n          \"name\": \"Denise Okuneva\",\n          \"image\": \"indexing\",\n          \"email\": \"Dangelo_Breitenberg28@gmail.com\"\n        },\n        \"publisher\": {\n          \"name\": \"Rose Funk\",\n          \"url\": \"SMS\",\n          \"logo\": \"withdrawal\"\n        },\n        \"articleSection\": \"red\",\n        \"articleBody\": \"Enterprise-wide\",\n        \"description\": \"evolve\",\n        \"slug\": \"Rapid\",\n        \"url\": \"Customizable\",\n        \"isDraft\": true,\n        \"addedby\": \"612650cc3dfbcf0a116af44e\",\n        \"id\": \"612650cc3dfbcf0a116af451\",\n        \"createdAt\": \"2022-02-27T03:12:44.719Z\",\n        \"updatedAt\": \"2022-05-07T11:03:34.536Z\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"_id\": \"612650cc3dfbcf0a116af451\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "getBlogCount",
+              "request": {
+                "url": {
+                  "raw": "{{url}}client/api/v1/blog/count",
+                  "host": [
+                    "{{url}}client"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "blog",
+                    "count"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"where\": {\n    \"isActive\": true\n  }\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "getBlogCount_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}client/api/v1/blog/count",
+                      "host": [
+                        "{{url}}client"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "blog",
+                        "count"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"totalRecords\": 10\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "aggregateBlog",
+              "request": {
+                "url": {
+                  "raw": "{{url}}client/api/v1/blog/aggregate",
+                  "host": [
+                    "{{url}}client"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "blog",
+                    "aggregate"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"group\": {\n    \"avg\": {\n      \"key\": {\n        \"_id\": [\n          \"field1\",\n          \"field2\"\n        ]\n      }\n    },\n    \"sum\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"min\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"max\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"addToSet\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    }\n  },\n  \"match\": {\n    \"key\": {\n      \"field\": \"value\"\n    }\n  },\n  \"project\": {\n    \"gt\": {\n      \"key\": {\n        \"field\": \"value\"\n      }\n    }\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "insertBulkBlog",
+              "request": {
+                "url": {
+                  "raw": "{{url}}client/api/v1/blog/addBulk",
+                  "host": [
+                    "{{url}}client"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "blog",
+                    "addBulk"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": [\n    {\n      \"title\": \"Director\",\n      \"alternativeHeadline\": \"vortals\",\n      \"image\": \"feed\",\n      \"publishDate\": \"Account\",\n      \"author\": {\n        \"name\": \"Denise Okuneva\",\n        \"image\": \"indexing\",\n        \"email\": \"Dangelo_Breitenberg28@gmail.com\"\n      },\n      \"publisher\": {\n        \"name\": \"Rose Funk\",\n        \"url\": \"SMS\",\n        \"logo\": \"withdrawal\"\n      },\n      \"articleSection\": \"red\",\n      \"articleBody\": \"Enterprise-wide\",\n      \"description\": \"evolve\",\n      \"slug\": \"Rapid\",\n      \"url\": \"Customizable\",\n      \"isDraft\": true,\n      \"addedby\": \"612650cc3dfbcf0a116af44e\"\n    }\n  ]\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "addBlog_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}client/api/v1/blog/addBulk",
+                      "host": [
+                        "{{url}}client"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "blog",
+                        "addBulk"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"title\": \"Director\",\n      \"alternativeHeadline\": \"vortals\",\n      \"image\": \"feed\",\n      \"publishDate\": \"Account\",\n      \"author\": {\n        \"name\": \"Denise Okuneva\",\n        \"image\": \"indexing\",\n        \"email\": \"Dangelo_Breitenberg28@gmail.com\"\n      },\n      \"publisher\": {\n        \"name\": \"Rose Funk\",\n        \"url\": \"SMS\",\n        \"logo\": \"withdrawal\"\n      },\n      \"articleSection\": \"red\",\n      \"articleBody\": \"Enterprise-wide\",\n      \"description\": \"evolve\",\n      \"slug\": \"Rapid\",\n      \"url\": \"Customizable\",\n      \"isDraft\": true,\n      \"addedby\": \"612650cc3dfbcf0a116af44e\",\n      \"id\": \"612650cc3dfbcf0a116af455\",\n      \"_id\": \"612650cc3dfbcf0a116af455\",\n      \"createdAt\": \"2022-04-08T03:58:01.460Z\",\n      \"updatedAt\": \"2021-11-08T22:32:39.507Z\",\n      \"isDeleted\": false,\n      \"isActive\": true\n    }\n  ]\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateBlog",
+              "request": {
+                "url": {
+                  "raw": "{{url}}client/api/v1/blog/update/:id",
+                  "host": [
+                    "{{url}}client"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "blog",
+                    "update",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"title\": \"Director\",\n  \"alternativeHeadline\": \"vortals\",\n  \"image\": \"feed\",\n  \"publishDate\": \"Account\",\n  \"author\": {\n    \"name\": \"Denise Okuneva\",\n    \"image\": \"indexing\",\n    \"email\": \"Dangelo_Breitenberg28@gmail.com\"\n  },\n  \"publisher\": {\n    \"name\": \"Rose Funk\",\n    \"url\": \"SMS\",\n    \"logo\": \"withdrawal\"\n  },\n  \"articleSection\": \"red\",\n  \"articleBody\": \"Enterprise-wide\",\n  \"description\": \"evolve\",\n  \"slug\": \"Rapid\",\n  \"url\": \"Customizable\",\n  \"isDraft\": true,\n  \"addedby\": \"612650cc3dfbcf0a116af44e\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "updateBlog_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}client/api/v1/blog/update/:id",
+                      "host": [
+                        "{{url}}client"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "blog",
+                        "update",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"Director\",\n    \"alternativeHeadline\": \"vortals\",\n    \"image\": \"feed\",\n    \"publishDate\": \"Account\",\n    \"author\": {\n      \"name\": \"Denise Okuneva\",\n      \"image\": \"indexing\",\n      \"email\": \"Dangelo_Breitenberg28@gmail.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Rose Funk\",\n      \"url\": \"SMS\",\n      \"logo\": \"withdrawal\"\n    },\n    \"articleSection\": \"red\",\n    \"articleBody\": \"Enterprise-wide\",\n    \"description\": \"evolve\",\n    \"slug\": \"Rapid\",\n    \"url\": \"Customizable\",\n    \"isDraft\": true,\n    \"addedby\": \"612650cc3dfbcf0a116af44e\",\n    \"id\": \"612650cc3dfbcf0a116af453\",\n    \"_id\": \"612650cc3dfbcf0a116af453\",\n    \"createdAt\": \"2021-11-29T15:44:44.828Z\",\n    \"updatedAt\": \"2022-03-06T17:29:02.147Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "partialupdateBlog",
+              "request": {
+                "url": {
+                  "raw": "{{url}}client/api/v1/blog/partial-update/:id",
+                  "host": [
+                    "{{url}}client"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "blog",
+                    "partial-update",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isActive\": true,\n  \"isDeleted\": false\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "partialupdateBlog_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}client/api/v1/blog/partial-update/:id",
+                      "host": [
+                        "{{url}}client"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "blog",
+                        "partial-update",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"Director\",\n    \"alternativeHeadline\": \"vortals\",\n    \"image\": \"feed\",\n    \"publishDate\": \"Account\",\n    \"author\": {\n      \"name\": \"Denise Okuneva\",\n      \"image\": \"indexing\",\n      \"email\": \"Dangelo_Breitenberg28@gmail.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Rose Funk\",\n      \"url\": \"SMS\",\n      \"logo\": \"withdrawal\"\n    },\n    \"articleSection\": \"red\",\n    \"articleBody\": \"Enterprise-wide\",\n    \"description\": \"evolve\",\n    \"slug\": \"Rapid\",\n    \"url\": \"Customizable\",\n    \"isDraft\": true,\n    \"addedby\": \"612650cc3dfbcf0a116af44e\",\n    \"id\": \"612650cc3dfbcf0a116af454\",\n    \"_id\": \"612650cc3dfbcf0a116af454\",\n    \"createdAt\": \"2021-11-22T19:01:45.943Z\",\n    \"updatedAt\": \"2022-01-24T07:45:28.416Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleteBlog",
+              "request": {
+                "url": {
+                  "raw": "{{url}}client/api/v1/blog/softDelete/:id",
+                  "host": [
+                    "{{url}}client"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "blog",
+                    "softDelete",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "softDeleteBlog_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}client/api/v1/blog/softDelete/:id",
+                      "host": [
+                        "{{url}}client"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "blog",
+                        "softDelete",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 1,\n    \"nModified\": 1,\n    \"ok\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleteManyBlog",
+              "request": {
+                "url": {
+                  "raw": "{{url}}client/api/v1/blog/softDeleteMany",
+                  "host": [
+                    "{{url}}client"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "blog",
+                    "softDeleteMany"
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ids\": [\n    \":id\"\n  ]\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "softDeleteManyBlog_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}client/api/v1/blog/softDeleteMany",
+                      "host": [
+                        "{{url}}client"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "blog",
+                        "softDeleteMany"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 2,\n    \"nModified\": 2,\n    \"ok\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateBulkBlog",
+              "request": {
+                "url": {
+                  "raw": "{{url}}client/api/v1/blog/updateBulk",
+                  "host": [
+                    "{{url}}client"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "blog",
+                    "updateBulk"
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filter\": {\n    \"isActive\": true\n  },\n  \"data\": {\n    \"isDeleted\": false\n  }\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "updateBulkBlog_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}client/api/v1/blog/updateBulk",
+                      "host": [
+                        "{{url}}client"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "blog",
+                        "updateBulk"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"title\": \"Director\",\n      \"alternativeHeadline\": \"vortals\",\n      \"image\": \"feed\",\n      \"publishDate\": \"Account\",\n      \"author\": {\n        \"name\": \"Denise Okuneva\",\n        \"image\": \"indexing\",\n        \"email\": \"Dangelo_Breitenberg28@gmail.com\"\n      },\n      \"publisher\": {\n        \"name\": \"Rose Funk\",\n        \"url\": \"SMS\",\n        \"logo\": \"withdrawal\"\n      },\n      \"articleSection\": \"red\",\n      \"articleBody\": \"Enterprise-wide\",\n      \"description\": \"evolve\",\n      \"slug\": \"Rapid\",\n      \"url\": \"Customizable\",\n      \"isDraft\": true,\n      \"addedby\": \"612650cc3dfbcf0a116af44e\",\n      \"id\": \"612650cc3dfbcf0a116af456\",\n      \"_id\": \"612650cc3dfbcf0a116af456\",\n      \"createdAt\": \"2021-09-12T04:00:09.510Z\",\n      \"updatedAt\": \"2022-01-12T14:19:56.314Z\",\n      \"isDeleted\": false,\n      \"isActive\": true\n    }\n  ]\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            }
+          ]
+        },
+        {
+          "name": "user",
+          "description": "user Model APIs",
+          "item": [
+            {
+              "name": "getuser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}client/api/v1/user/:id",
+                  "host": [
+                    "{{url}}client"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "getuser_response",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}client/api/v1/user/:id",
+                      "host": [
+                        "{{url}}client"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "user",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Willie Lueilwitz\",\n    \"password\": \"2s06J_kl7Gzv1XO\",\n    \"email\": \"Emiliano95@hotmail.com\",\n    \"name\": \"Sarah Rice\",\n    \"role\": 1,\n    \"id\": \"612650cc3dfbcf0a116af45a\",\n    \"_id\": \"612650cc3dfbcf0a116af45a\",\n    \"createdAt\": \"2022-01-15T20:19:11.156Z\",\n    \"updatedAt\": \"2021-11-19T17:49:25.806Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "adduser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}client/api/v1/user/create",
+                  "host": [
+                    "{{url}}client"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "create"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"username\": \"Willie Lueilwitz\",\n  \"password\": \"2s06J_kl7Gzv1XO\",\n  \"email\": \"Emiliano95@hotmail.com\",\n  \"name\": \"Sarah Rice\",\n  \"role\": 1\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "adduser_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}client/api/v1/user/create",
+                      "host": [
+                        "{{url}}client"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "user",
+                        "create"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Willie Lueilwitz\",\n    \"password\": \"2s06J_kl7Gzv1XO\",\n    \"email\": \"Emiliano95@hotmail.com\",\n    \"name\": \"Sarah Rice\",\n    \"role\": 1,\n    \"id\": \"612650cc3dfbcf0a116af458\",\n    \"_id\": \"612650cc3dfbcf0a116af458\",\n    \"createdAt\": \"2021-12-06T16:49:27.326Z\",\n    \"updatedAt\": \"2022-07-29T03:13:59.764Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "findAlluser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}client/api/v1/user/list",
+                  "host": [
+                    "{{url}}client"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "list"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": {},\n  \"options\": {\n    \"select\": [\n      \"field 1\",\n      \"field 2\"\n    ],\n    \"collation\": \"\",\n    \"sort\": \"\",\n    \"populate\": \"\",\n    \"projection\": \"\",\n    \"lean\": false,\n    \"leanWithId\": true,\n    \"offset\": 0,\n    \"page\": 1,\n    \"limit\": 10,\n    \"customLabels\": {},\n    \"pagination\": true,\n    \"useEstimatedCount\": false,\n    \"useCustomCountFn\": false,\n    \"forceCountFn\": false,\n    \"read\": {},\n    \"options\": {}\n  },\n  \"isCountOnly\": false\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "findAlluser_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}client/api/v1/user/list",
+                      "host": [
+                        "{{url}}client"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "user",
+                        "list"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"username\": \"Willie Lueilwitz\",\n        \"password\": \"2s06J_kl7Gzv1XO\",\n        \"email\": \"Emiliano95@hotmail.com\",\n        \"name\": \"Sarah Rice\",\n        \"role\": 1,\n        \"id\": \"612650cc3dfbcf0a116af459\",\n        \"createdAt\": \"2021-11-30T21:46:54.931Z\",\n        \"updatedAt\": \"2021-12-05T23:41:24.601Z\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"_id\": \"612650cc3dfbcf0a116af459\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "getuserCount",
+              "request": {
+                "url": {
+                  "raw": "{{url}}client/api/v1/user/count",
+                  "host": [
+                    "{{url}}client"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "count"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"where\": {\n    \"isActive\": true\n  }\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "getuserCount_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}client/api/v1/user/count",
+                      "host": [
+                        "{{url}}client"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "user",
+                        "count"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"totalRecords\": 10\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "aggregateuser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}client/api/v1/user/aggregate",
+                  "host": [
+                    "{{url}}client"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "aggregate"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"group\": {\n    \"avg\": {\n      \"key\": {\n        \"_id\": [\n          \"field1\",\n          \"field2\"\n        ]\n      }\n    },\n    \"sum\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"min\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"max\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"addToSet\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    }\n  },\n  \"match\": {\n    \"key\": {\n      \"field\": \"value\"\n    }\n  },\n  \"project\": {\n    \"gt\": {\n      \"key\": {\n        \"field\": \"value\"\n      }\n    }\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "insertBulkuser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}client/api/v1/user/addBulk",
+                  "host": [
+                    "{{url}}client"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "addBulk"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": [\n    {\n      \"username\": \"Willie Lueilwitz\",\n      \"password\": \"2s06J_kl7Gzv1XO\",\n      \"email\": \"Emiliano95@hotmail.com\",\n      \"name\": \"Sarah Rice\",\n      \"role\": 1\n    }\n  ]\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "adduser_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}client/api/v1/user/addBulk",
+                      "host": [
+                        "{{url}}client"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "user",
+                        "addBulk"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Willie Lueilwitz\",\n      \"password\": \"2s06J_kl7Gzv1XO\",\n      \"email\": \"Emiliano95@hotmail.com\",\n      \"name\": \"Sarah Rice\",\n      \"role\": 1,\n      \"id\": \"612650cc3dfbcf0a116af45d\",\n      \"_id\": \"612650cc3dfbcf0a116af45d\",\n      \"createdAt\": \"2022-07-04T08:02:50.609Z\",\n      \"updatedAt\": \"2022-04-20T08:53:24.245Z\",\n      \"isDeleted\": false,\n      \"isActive\": true\n    }\n  ]\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateuser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}client/api/v1/user/update/:id",
+                  "host": [
+                    "{{url}}client"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "update",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"username\": \"Willie Lueilwitz\",\n  \"password\": \"2s06J_kl7Gzv1XO\",\n  \"email\": \"Emiliano95@hotmail.com\",\n  \"name\": \"Sarah Rice\",\n  \"role\": 1\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "updateuser_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}client/api/v1/user/update/:id",
+                      "host": [
+                        "{{url}}client"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "user",
+                        "update",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Willie Lueilwitz\",\n    \"password\": \"2s06J_kl7Gzv1XO\",\n    \"email\": \"Emiliano95@hotmail.com\",\n    \"name\": \"Sarah Rice\",\n    \"role\": 1,\n    \"id\": \"612650cc3dfbcf0a116af45b\",\n    \"_id\": \"612650cc3dfbcf0a116af45b\",\n    \"createdAt\": \"2022-05-10T02:55:46.773Z\",\n    \"updatedAt\": \"2021-09-24T07:16:35.017Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "partialupdateuser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}client/api/v1/user/partial-update/:id",
+                  "host": [
+                    "{{url}}client"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "partial-update",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isActive\": true,\n  \"isDeleted\": false\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "partialupdateuser_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}client/api/v1/user/partial-update/:id",
+                      "host": [
+                        "{{url}}client"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "user",
+                        "partial-update",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Willie Lueilwitz\",\n    \"password\": \"2s06J_kl7Gzv1XO\",\n    \"email\": \"Emiliano95@hotmail.com\",\n    \"name\": \"Sarah Rice\",\n    \"role\": 1,\n    \"id\": \"612650cc3dfbcf0a116af45c\",\n    \"_id\": \"612650cc3dfbcf0a116af45c\",\n    \"createdAt\": \"2021-12-30T12:55:27.411Z\",\n    \"updatedAt\": \"2022-03-10T06:00:21.674Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleteuser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}client/api/v1/user/softDelete/:id",
+                  "host": [
+                    "{{url}}client"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "softDelete",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "softDeleteuser_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}client/api/v1/user/softDelete/:id",
+                      "host": [
+                        "{{url}}client"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "user",
+                        "softDelete",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 1,\n    \"nModified\": 1,\n    \"ok\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleteManyuser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}client/api/v1/user/softDeleteMany",
+                  "host": [
+                    "{{url}}client"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "softDeleteMany"
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ids\": [\n    \":id\"\n  ]\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "softDeleteManyuser_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}client/api/v1/user/softDeleteMany",
+                      "host": [
+                        "{{url}}client"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "user",
+                        "softDeleteMany"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 2,\n    \"nModified\": 2,\n    \"ok\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateBulkuser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}client/api/v1/user/updateBulk",
+                  "host": [
+                    "{{url}}client"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "updateBulk"
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filter\": {\n    \"isActive\": true\n  },\n  \"data\": {\n    \"isDeleted\": false\n  }\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "updateBulkuser_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}client/api/v1/user/updateBulk",
+                      "host": [
+                        "{{url}}client"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "user",
+                        "updateBulk"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Willie Lueilwitz\",\n      \"password\": \"2s06J_kl7Gzv1XO\",\n      \"email\": \"Emiliano95@hotmail.com\",\n      \"name\": \"Sarah Rice\",\n      \"role\": 1,\n      \"id\": \"612650cc3dfbcf0a116af45e\",\n      \"_id\": \"612650cc3dfbcf0a116af45e\",\n      \"createdAt\": \"2021-09-04T07:32:05.113Z\",\n      \"updatedAt\": \"2021-09-06T20:31:44.119Z\",\n      \"isDeleted\": false,\n      \"isActive\": true\n    }\n  ]\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateProfile",
+              "request": {
+                "url": {
+                  "raw": "{{url}}client/api/v1/user/update-profile",
+                  "host": [
+                    "{{url}}client"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "update-profile"
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"username\": \"Willie Lueilwitz\",\n  \"password\": \"2s06J_kl7Gzv1XO\",\n  \"email\": \"Emiliano95@hotmail.com\",\n  \"name\": \"Sarah Rice\",\n  \"role\": 1\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "updateProfileuser_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}client/api/v1/user/update-profile",
+                      "host": [
+                        "{{url}}client"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "user",
+                        "update-profile"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Willie Lueilwitz\",\n      \"password\": \"2s06J_kl7Gzv1XO\",\n      \"email\": \"Emiliano95@hotmail.com\",\n      \"name\": \"Sarah Rice\",\n      \"role\": 1,\n      \"id\": \"612650cc3dfbcf0a116af45f\",\n      \"_id\": \"612650cc3dfbcf0a116af45f\",\n      \"createdAt\": \"2022-04-10T21:08:28.696Z\",\n      \"updatedAt\": \"2022-04-06T17:51:00.273Z\",\n      \"isDeleted\": false,\n      \"isActive\": true\n    }\n  ]\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            }
+          ]
+        },
+        {
+          "name": "login",
+          "description": "client Login",
+          "item": [
+            {
+              "name": "Login in client",
+              "request": {
+                "url": {
+                  "raw": "{{url}}client/auth/login",
+                  "host": [
+                    "{{url}}client"
+                  ],
+                  "path": [
+                    "auth",
+                    "login"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"username\": \"Your username\",\n  \"password\": \"YourPassword\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "Login in client_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}client/auth/login",
+                      "host": [
+                        "{{url}}client"
+                      ],
+                      "path": [
+                        "auth",
+                        "login"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Login Successful\",\n  \"data\": {\n    \"username\": \"Willie Lueilwitz\",\n    \"password\": \"2s06J_kl7Gzv1XO\",\n    \"email\": \"Emiliano95@hotmail.com\",\n    \"name\": \"Sarah Rice\",\n    \"role\": 1,\n    \"id\": \"612650cc3dfbcf0a116af460\",\n    \"_id\": \"612650cc3dfbcf0a116af460\",\n    \"loginRetryLimit\": 0,\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMWRlZDVjMGFjMjAxMmFjMDI4ODkxZiIsInVzZXJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2MjkzNTEyNzAsImV4cCI6MTYyOTk1MTI3MH0.BJ-WKjNYeFDQ4pn8kfli5gwn6GLz_c3voFht20Agj9k\",\n    \"createdAt\": \"2022-08-03T19:02:48.747Z\",\n    \"updatedAt\": \"2022-08-22T15:44:55.459Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Register User in client",
+              "request": {
+                "url": {
+                  "raw": "{{url}}client/auth/register",
+                  "host": [
+                    "{{url}}client"
+                  ],
+                  "path": [
+                    "auth",
+                    "register"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"username\": \"Willie Lueilwitz\",\n  \"password\": \"2s06J_kl7Gzv1XO\",\n  \"email\": \"Emiliano95@hotmail.com\",\n  \"name\": \"Sarah Rice\",\n  \"role\": 1\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "Register User in client_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}client/auth/register",
+                      "host": [
+                        "{{url}}client"
+                      ],
+                      "path": [
+                        "auth",
+                        "register"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Willie Lueilwitz\",\n    \"password\": \"2s06J_kl7Gzv1XO\",\n    \"email\": \"Emiliano95@hotmail.com\",\n    \"name\": \"Sarah Rice\",\n    \"role\": 1,\n    \"id\": \"612650cc3dfbcf0a116af460\",\n    \"_id\": \"612650cc3dfbcf0a116af460\",\n    \"loginRetryLimit\": 0,\n    \"createdAt\": \"2021-12-28T13:00:01.005Z\",\n    \"updatedAt\": \"2021-09-14T18:51:31.798Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Forgot Password in client",
+              "request": {
+                "url": {
+                  "raw": "{{url}}client/auth/forgot-password",
+                  "host": [
+                    "{{url}}client"
+                  ],
+                  "path": [
+                    "auth",
+                    "forgot-password"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"email\": \"yourmail@gmail.com\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "Forgot Password in client_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}client/auth/forgot-password",
+                      "host": [
+                        "{{url}}client"
+                      ],
+                      "path": [
+                        "auth",
+                        "forgot-password"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": \"otp successfully send to your email.\"\n}",
+                  "header": [],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Validate OTP in client",
+              "request": {
+                "url": {
+                  "raw": "{{url}}client/auth/validate-otp",
+                  "host": [
+                    "{{url}}client"
+                  ],
+                  "path": [
+                    "auth",
+                    "validate-otp"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"otp\": \"5898\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "Validate OTP in client_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}client/auth/validate-otp",
+                      "host": [
+                        "{{url}}client"
+                      ],
+                      "path": [
+                        "auth",
+                        "validate-otp"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": \"Invalid OTP\"\n}",
+                  "header": [],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Change Password in client",
+              "request": {
+                "url": {
+                  "raw": "{{url}}client/api/v1/user/change-password",
+                  "host": [
+                    "{{url}}client"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "change-password"
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"oldPassword\": \"YourOldPassword\",\n  \"newPassword\": \"YourNewPassword\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "Change Password in client_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}client/api/v1/user/change-password",
+                      "host": [
+                        "{{url}}client"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "user",
+                        "change-password"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Password changed successfully\",\n  \"data\": {}\n}",
+                  "header": [],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Reset password in client",
+              "request": {
+                "url": {
+                  "raw": "{{url}}client/auth/reset-password",
+                  "host": [
+                    "{{url}}client"
+                  ],
+                  "path": [
+                    "auth",
+                    "reset-password"
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"code\": \"5898\",\n  \"newPassword\": \"yourPassword\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "Reset password in client_response~",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}client/auth/reset-password",
+                      "host": [
+                        "{{url}}client"
+                      ],
+                      "path": [
+                        "auth",
+                        "reset-password"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": \"Password reset successfully\"\n}",
+                  "header": [],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
