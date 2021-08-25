@@ -9,7 +9,7 @@ let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 const passport = require('passport');
 
-const { adminPassportStrategy } = require('./config/adminPassportStrategy');
+const { clientPassportStrategy } = require('./config/clientPassportStrategy');
 const app = express();
 const corsOptions = { origin: process.env.ALLOW_ORIGIN, };
 app.use(cors(corsOptions));
@@ -28,6 +28,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
-adminPassportStrategy(passport);
+clientPassportStrategy(passport);
 
 module.exports = app;

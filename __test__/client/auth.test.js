@@ -15,12 +15,12 @@ beforeAll(() => {
 describe('POST /register -> if email and username is given', () => {
   test('should register a user', async () => {
     let registeredUser = await request(app)
-      .post('/admin/auth/register')
+      .post('/client/auth/register')
       .send({
-        username: 'Oscar Cremin',
-        password: '5IsYlsMEgla_Zqw',
-        email: 'Aisha91@gmail.com',
-        name: 'Tyrone Schoen',
+        username: 'Sue Haley DVM',
+        password: 'vsgiLl6TV69BFmv',
+        email: 'Karine_Schneider@hotmail.com',
+        name: 'Mrs. Brad Zulauf',
         role: 1
       });
 
@@ -34,10 +34,10 @@ describe('POST /register -> if email and username is given', () => {
 describe('POST /login -> if username and password is correct', () => {
   test('should return user with authentication token', async () => {
     let user = await request(app)
-      .post('/admin/auth/login')
+      .post('/client/auth/login')
       .send({
-        password: '5IsYlsMEgla_Zqw',
-        username: 'Aisha91@gmail.com' 
+        password: 'vsgiLl6TV69BFmv',
+        username: 'Karine_Schneider@hotmail.com'
       });
 
     expect(user.headers['content-type']).toEqual('application/json; charset=utf-8');
@@ -53,10 +53,10 @@ describe('POST /login -> if username and password is correct', () => {
 describe('POST /login -> if username is incorrect', () => {
   test('should return unauthorized status and user not exists', async () => {
     let user = await request(app)
-      .post('/admin/auth/login')
+      .post('/client/auth/login')
       .send({
-        password: '5IsYlsMEgla_Zqw',
-        username: 'wrongAisha91@gmail.com' 
+        password: 'vsgiLl6TV69BFmv',
+        username: 'wrongKarine_Schneider@hotmail.com'
       });
 
     expect(user.headers['content-type']).toEqual('application/json; charset=utf-8');
@@ -68,10 +68,10 @@ describe('POST /login -> if username is incorrect', () => {
 describe('POST /login -> if password is incorrect', () => {
   test('should return unauthorized status and incorrect password', async () => {
     let user = await request(app)
-      .post('/admin/auth/login')
+      .post('/client/auth/login')
       .send({
-        password: 'wrong5IsYlsMEgla_Zqw',
-        username: 'Aisha91@gmail.com' 
+        password: 'wrongvsgiLl6TV69BFmv',
+        username: 'Karine_Schneider@hotmail.com'
       });
 
     expect(user.headers['content-type']).toEqual('application/json; charset=utf-8');
@@ -83,7 +83,7 @@ describe('POST /login -> if password is incorrect', () => {
 describe('POST /login -> if username or password is empty string or has not passed in body', () => {
   test('should return bad request status and insufficient parameters', async () => {
     let user = await request(app)
-      .post('/admin/auth/login')
+      .post('/client/auth/login')
       .send({});
 
     expect(user.headers['content-type']).toEqual('application/json; charset=utf-8');
@@ -96,7 +96,7 @@ describe('POST /login -> if username or password is empty string or has not pass
 describe('POST /forgot-password -> if email has not passed from request body', () => {
   test('should return bad request status and insufficient parameters', async () => {
     let user = await request(app)
-      .post('/admin/auth/forgot-password')
+      .post('/client/auth/forgot-password')
       .send({ email: '' });
 
     expect(user.headers['content-type']).toEqual('application/json; charset=utf-8');
@@ -109,7 +109,7 @@ describe('POST /forgot-password -> if email has not passed from request body', (
 describe('POST /forgot-password -> if email passed from request body is not available in database ', () => {
   test('should return record not found status', async () => {
     let user = await request(app)
-      .post('/admin/auth/forgot-password')
+      .post('/client/auth/forgot-password')
       .send({ 'email': 'unavailable.email@hotmail.com', });
 
     expect(user.headers['content-type']).toEqual('application/json; charset=utf-8');
@@ -127,7 +127,7 @@ describe('POST /forgot-password -> if email passed from request body is valid an
       'otp successfully send to your mobile number.'
     ];
     let user = await request(app)
-      .post('/admin/auth/forgot-password')
+      .post('/client/auth/forgot-password')
       .send({ 'email': 'valid.email@hotmail.com', });
 
     expect(user.headers['content-type']).toEqual('application/json; charset=utf-8');
@@ -140,7 +140,7 @@ describe('POST /forgot-password -> if email passed from request body is valid an
 describe('POST /forgot-password -> if sms/email service credentials are not given', () => {
   test('should return success message', async () => {
     let user = await request(app)
-      .post('/admin/auth/forgot-password')
+      .post('/client/auth/forgot-password')
       .send({ 'email': 'example@hotmail.com', });
 
     expect(user.headers['content-type']).toEqual('application/json; charset=utf-8');
@@ -152,20 +152,20 @@ describe('POST /forgot-password -> if sms/email service credentials are not give
 describe('POST /validate-otp -> otp is sent in request body and OTP is correct', () => {
   test('should return success', async () => {
     let login = await request(app)
-      .post('/admin/auth/login')
+      .post('/client/auth/login')
       .send({
         'password': 'password@123',
         'username': 'example@hotmail.com',
       });
     let foundUser = await request(app)
-      .get(`/admin/user/${login.body.data.id}`)
+      .get(`/client/api/v1/user/${login.body.data.id}`)
       .set({
         Accept: 'application/json',
         Authorization: `Bearer ${login.body.data.token}`
       });
 
     let user = await request(app)
-      .post('/admin/auth/validate-otp')
+      .post('/client/auth/validate-otp')
       .send({ 'otp': foundUser.body.data.resetPasswordLink.code, });
 
     expect(user.headers['content-type']).toEqual('application/json; charset=utf-8');
@@ -177,7 +177,7 @@ describe('POST /validate-otp -> otp is sent in request body and OTP is correct',
 describe('POST /validate-otp -> if OTP is incorrect or OTP has expired', () => {
   test('should return invalid OTP', async () => {
     let user = await request(app)
-      .post('/admin/auth/validate-otp')
+      .post('/client/auth/validate-otp')
       .send({ 'otp': 12334 });
 
     expect(user.headers['content-type']).toEqual('application/json; charset=utf-8');
@@ -190,7 +190,7 @@ describe('POST /validate-otp -> if OTP is incorrect or OTP has expired', () => {
 describe('POST /validate-otp -> if request body is empty or otp has not been sent in body', () => {
   test('should return insufficient parameter', async () => {
     let user = await request(app)
-      .post('/admin/auth/validate-otp')
+      .post('/client/auth/validate-otp')
       .send({});
 
     expect(user.headers['content-type']).toEqual('application/json; charset=utf-8');
@@ -202,7 +202,7 @@ describe('POST /validate-otp -> if request body is empty or otp has not been sen
 describe('PUT /reset-password -> if request body is empty or code/newPassword is not given', () => {
   test('should return insufficient parameter', async () => {
     let user = await request(app)
-      .put('/admin/auth/reset-password')
+      .put('/client/auth/reset-password')
       .send({});
 
     expect(user.headers['content-type']).toEqual('application/json; charset=utf-8');
@@ -214,7 +214,7 @@ describe('PUT /reset-password -> if request body is empty or code/newPassword is
 describe('PUT /reset-password -> if code is invalid', () => {
   test('should return invalid code', async () => {
     let user = await request(app)
-      .put('/admin/auth/reset-password')
+      .put('/client/auth/reset-password')
       .send({
         'code': '123',
         'newPassword': 'testPassword'

@@ -48,159 +48,159 @@ async function seedProjectRoutes (routes) {
 async function seedRouteRole () {
   const routeRoles = [ 
     {
-      route: '/admin/user/create',
+      route: '/client/api/v1/user/create',
       role: 'User',
       method: 'POST' 
     },
     {
-      route: '/admin/user/create',
+      route: '/client/api/v1/user/create',
       role: 'Admin',
       method: 'POST' 
     },
     {
-      route: '/admin/user/create',
+      route: '/client/api/v1/user/create',
       role: 'SYSTEM_USER',
-      method: 'POST' 
+      method: 'POST'
     },
     {
-      route: '/admin/user/list',
+      route: '/client/api/v1/user/list',
       role: 'User',
       method: 'POST' 
     },
     {
-      route: '/admin/user/list',
+      route: '/client/api/v1/user/list',
       role: 'Admin',
       method: 'POST' 
     },
     {
-      route: '/admin/user/list',
+      route: '/client/api/v1/user/list',
       role: 'SYSTEM_USER',
-      method: 'POST' 
+      method: 'POST'
     },
     {
-      route: '/admin/user/aggregate',
+      route: '/client/api/v1/user/aggregate',
       role: 'User',
-      method: 'POST' 
+      method: 'POST'
     },
     {
-      route: '/admin/user/aggregate',
+      route: '/client/api/v1/user/aggregate',
       role: 'Admin',
-      method: 'POST' 
+      method: 'POST'
     },
     {
-      route: '/admin/user/aggregate',
+      route: '/client/api/v1/user/aggregate',
       role: 'SYSTEM_USER',
-      method: 'POST' 
+      method: 'POST'
     },
     {
-      route: '/admin/user/:id',
+      route: '/client/api/v1/user/:id',
       role: 'User',
       method: 'GET' 
     },
     {
-      route: '/admin/user/:id',
+      route: '/client/api/v1/user/:id',
       role: 'Admin',
       method: 'GET' 
     },
     {
-      route: '/admin/user/:id',
+      route: '/client/api/v1/user/:id',
       role: 'SYSTEM_USER',
-      method: 'GET' 
+      method: 'GET'
     },
     {
-      route: '/admin/user/count',
+      route: '/client/api/v1/user/count',
       role: 'User',
       method: 'POST' 
     },
     {
-      route: '/admin/user/count',
+      route: '/client/api/v1/user/count',
       role: 'Admin',
       method: 'POST' 
     },
     {
-      route: '/admin/user/count',
+      route: '/client/api/v1/user/count',
       role: 'SYSTEM_USER',
-      method: 'POST' 
+      method: 'POST'
     },
     {
-      route: '/admin/user/update/:id',
-      role: 'User',
-      method: 'PUT' 
-    },
-    {
-      route: '/admin/user/update/:id',
-      role: 'Admin',
-      method: 'PUT' 
-    },
-    {
-      route: '/admin/user/update/:id',
-      role: 'SYSTEM_USER',
-      method: 'PUT' 
-    },
-    {
-      route: '/admin/user/partial-update/:id',
+      route: '/client/api/v1/user/update/:id',
       role: 'User',
       method: 'PUT'
     },
     {
-      route: '/admin/user/partial-update/:id',
+      route: '/client/api/v1/user/update/:id',
       role: 'Admin',
       method: 'PUT'
     },
     {
-      route: '/admin/user/partial-update/:id',
+      route: '/client/api/v1/user/update/:id',
       role: 'SYSTEM_USER',
       method: 'PUT'
     },
     {
-      route: '/admin/user/softdelete/:id',
+      route: '/client/api/v1/user/partial-update/:id',
       role: 'User',
-      method: 'PUT' 
+      method: 'PUT'
     },
     {
-      route: '/admin/user/softdelete/:id',
+      route: '/client/api/v1/user/partial-update/:id',
       role: 'Admin',
-      method: 'PUT' 
+      method: 'PUT'
     },
     {
-      route: '/admin/user/softdelete/:id',
+      route: '/client/api/v1/user/partial-update/:id',
       role: 'SYSTEM_USER',
       method: 'PUT'
     },
     {
-      route: '/admin/user/softdeletemany',
+      route: '/client/api/v1/user/softdelete/:id',
       role: 'User',
-      method: 'PUT' 
+      method: 'PUT'
     },
     {
-      route: '/admin/user/softdeletemany',
+      route: '/client/api/v1/user/softdelete/:id',
       role: 'Admin',
-      method: 'PUT' 
+      method: 'PUT'
     },
     {
-      route: '/admin/user/softdeletemany',
+      route: '/client/api/v1/user/softdelete/:id',
       role: 'SYSTEM_USER',
       method: 'PUT'
     },
     {
-      route: '/admin/user/delete/:id',
+      route: '/client/api/v1/user/softdeletemany',
+      role: 'User',
+      method: 'PUT'
+    },
+    {
+      route: '/client/api/v1/user/softdeletemany',
+      role: 'Admin',
+      method: 'PUT'
+    },
+    {
+      route: '/client/api/v1/user/softdeletemany',
+      role: 'SYSTEM_USER',
+      method: 'PUT'
+    },
+    {
+      route: '/client/api/v1/user/delete/:id',
       role: 'SYSTEM_USER',
       method: 'DELETE'
     },
     {
-      route: '/admin/user/deletemany',
+      route: '/client/api/v1/user/deletemany',
       role: 'SYSTEM_USER',
       method: 'DELETE'
     },
     {
-      route: '/admin/user/addbulk',
+      route: '/client/api/v1/user/addbulk',
       role: 'SYSTEM_USER',
-      method: 'POST' 
+      method: 'POST'
     },
     {
-      route: '/admin/user/updatebulk',
+      route: '/client/api/v1/user/updatebulk',
       role: 'SYSTEM_USER',
-      method: 'PUT' 
+      method: 'PUT'
     },
 
   ];
@@ -237,41 +237,41 @@ async function seedRouteRole () {
     
 }
 async function seedUserRole (){
-  let user = await User.findOne({
-    'email':'Gonzalo0@yahoo.com',
+  let admin = await User.findOne({
+    'email':'Kailyn.Beer22@yahoo.com',
     'isActive':true,
     'isDeleted':false
   });
-  let userRole = await Role.findOne({ code: 'SYSTEM_USER' }, { id: 1 });
-  if (user && user.isPasswordMatch('XjQ6XSZgmcaTOeD') && userRole){
+  let adminRole = await Role.findOne({ code: 'SYSTEM_USER' }, { id: 1 });
+  if (admin && admin.isPasswordMatch('eCtsw_VamUWoSqg') && adminRole){
     let count = await UserRole.countDocuments({
-      userId: user.id,
-      roleId: userRole.id,
+      userId: admin.id,
+      roleId: adminRole.id,
       isActive: true, 
       isDeleted: false
     });
     if (count == 0) {
       await UserRole.create({
-        userId: user.id,
-        roleId: userRole.id 
+        userId: admin.id,
+        roleId: adminRole.id 
       });
-      console.info('user seeded 🍺');
+      console.info('admin seeded 🍺');
     }   
   }
 }
 async function seedUser () {
-  let user = await User.findOne({
-    'email':'Gonzalo0@yahoo.com',
+  let admin = await User.findOne({
+    'email':'Kailyn.Beer22@yahoo.com',
     'isActive':true,
     'isDeleted':false
   });
-  if (!user || !user.isPasswordMatch('XjQ6XSZgmcaTOeD') ) {
-    let user = new User({
-      'password':'XjQ6XSZgmcaTOeD',
-      'email':'Gonzalo0@yahoo.com',
-      'role':2
+  if (!admin || !admin.isPasswordMatch('eCtsw_VamUWoSqg') ) {
+    let admin = new User({
+      'password':'eCtsw_VamUWoSqg',
+      'email':'Kailyn.Beer22@yahoo.com',
+      'role':1
     });
-    await User.create(user);
+    await User.create(admin);
   }
   console.info('Users seeded 🍺');
 }

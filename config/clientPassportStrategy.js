@@ -1,5 +1,5 @@
 /*
- * admin authentication - with passport
+ * client authentication - with passport
  */
 
 const {
@@ -9,11 +9,11 @@ const { JWT } = require('../constants/authConstant');
 const user = require('../model/user');
 
 module.exports = {
-  adminPassportStrategy: passport => {
+  clientPassportStrategy: passport => {
     const options = {};
     options.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
-    options.secretOrKey = JWT.ADMIN_SECRET;
-    passport.use('admin-rule',
+    options.secretOrKey = JWT.CLIENT_SECRET;
+    passport.use('client-rule',
       new Strategy(options, (payload, done) => {
         user.findOne({ email: payload.email }, (err, user) => {
           if (err) {

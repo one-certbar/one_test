@@ -3,39 +3,39 @@
  */
 
 const JWT = {
-  ADMIN_SECRET:'myjwtadminsecret',
+  CLIENT_SECRET:'myjwtclientsecret',
   EXPIRES_IN: 10000
 };
 
-const USER_ROLE = { User:1, };
+const USER_ROLE = { Admin :1, };
 
-const PLATFORM = { ADMIN:1, };
+const PLATFORM = { CLIENT:1, };
 
-let LOGIN_ACCESS = { [USER_ROLE.User]:[PLATFORM.ADMIN], };
+let LOGIN_ACCESS = { [USER_ROLE.Admin]:[PLATFORM.CLIENT], };
 
 const DEFAULT_ROLE = 1;
 
 const ROLE_RIGHTS = {
     
-  [USER_ROLE.User] : [
-    'getAllByUserInAdminPlatform',
-    'getByUserInAdminPlatform',
-    'aggregateByUserInAdminPlatform',
-    'getCountByUserInAdminPlatform',
-    'createByUserInAdminPlatform',
-    'addBulkByUserInAdminPlatform',
-    'updateByUserInAdminPlatform',
-    'updateBulkByUserInAdminPlatform',
-    'partialUpdateByUserInAdminPlatform',
-    'deleteByUserInAdminPlatform',
-    'softDeleteByUserInAdminPlatform',
-    'upsertByUserInAdminPlatform',
-    'fileUploadByUserInAdminPlatform',
-    'logoutByUserInAdminPlatform',
-    'softDeleteManyByUserInAdminPlatform',
-    'deleteManyByUserInAdminPlatform',
-    'changePasswordByUserInAdminPlatform',
-    'updateProfileByUserInAdminPlatform'
+  [USER_ROLE.Admin] : [
+    'getAllByAdminInClientPlatform',
+    'getByAdminInClientPlatform',
+    'aggregateByAdminInClientPlatform',
+    'getCountByAdminInClientPlatform',
+    'createByAdminInClientPlatform',
+    'addBulkByAdminInClientPlatform',
+    'updateByAdminInClientPlatform',
+    'updateBulkByAdminInClientPlatform',
+    'partialUpdateByAdminInClientPlatform',
+    'deleteByAdminInClientPlatform',
+    'softDeleteByAdminInClientPlatform',
+    'upsertByAdminInClientPlatform',
+    'fileUploadByAdminInClientPlatform',
+    'logoutByAdminInClientPlatform',
+    'softDeleteManyByAdminInClientPlatform',
+    'deleteManyByAdminInClientPlatform',
+    'changePasswordByAdminInClientPlatform',
+    'updateProfileByAdminInClientPlatform'
   ],
     
 };
