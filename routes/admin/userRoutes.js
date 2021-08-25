@@ -1,0 +1,20 @@
+const express = require('express');
+const router = express.Router();
+const userController = require('../../controller/admin/userController');
+const auth = require('../../middleware/auth');
+const checkRolePermission = require('../../middleware/checkRolePermission');
+router.route('/admin/user/create').post(auth(...[ 'createByUserInAdminPlatform' ]),checkRolePermission,userController.addUser);
+router.route('/admin/user/list').post(auth(...[ 'getAllByUserInAdminPlatform' ]),checkRolePermission,userController.findAllUser);
+router.route('/admin/user/:id').get(auth(...[ 'getByUserInAdminPlatform' ]),checkRolePermission,userController.getUser);
+router.route('/admin/user/count').post(auth(...[ 'getCountByUserInAdminPlatform' ]),checkRolePermission,userController.getUserCount);
+router.route('/admin/user/aggregate').post(auth(...[ 'aggregateByUserInAdminPlatform' ]),checkRolePermission,userController.getUserByAggregate);
+router.route('/admin/user/update/:id').put(auth(...[ 'updateByUserInAdminPlatform' ]),checkRolePermission,userController.updateUser);    
+router.route('/admin/user/partial-update/:id').put(auth(...[ 'partialUpdateByUserInAdminPlatform' ]),checkRolePermission,userController.partialUpdateUser);
+router.route('/admin/user/softDelete/:id').put(auth(...[ 'softDeleteByUserInAdminPlatform' ]),checkRolePermission,userController.softDeleteUser);
+router.route('/admin/user/softDeleteMany').put(auth(...[ 'softDeleteManyByUserInAdminPlatform' ]),checkRolePermission,userController.softDeleteManyUser);
+router.route('/admin/user/addBulk').post(auth(...[ 'addBulkByUserInAdminPlatform' ]),checkRolePermission,userController.bulkInsertUser);
+router.route('/admin/user/updateBulk').put(auth(...[ 'updateBulkByUserInAdminPlatform' ]),checkRolePermission,userController.bulkUpdateUser);
+router.route('/admin/user/change-password').put(auth(...[ 'changePasswordByUserInAdminPlatform' ]),userController.changePassword);
+router.route('/admin/user/update-profile').put(auth(...[ 'updateProfileByUserInAdminPlatform' ]),userController.updateProfile);
+
+module.exports = router;
