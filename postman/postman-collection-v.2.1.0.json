@@ -1,0 +1,4054 @@
+{
+  "info": {
+    "name": "one_test",
+    "_postman_id": "d5da8647-a6b3-4808-8f35-c9b85138c609",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "admin",
+      "description": "admin APIs",
+      "item": [
+        {
+          "name": "user",
+          "description": "user Model APIs",
+          "item": [
+            {
+              "name": "getuser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/user/:id",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "user",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "getuser_response",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/user/:id",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "user",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Steve Treutel II\",\n    \"password\": \"xdv_kIRSCUCjbYz\",\n    \"email\": \"Arne78@gmail.com\",\n    \"name\": \"Ethel Effertz\",\n    \"role\": 1,\n    \"id\": \"612646b92375a3097c7aa66b\",\n    \"_id\": \"612646b92375a3097c7aa66b\",\n    \"createdAt\": \"2022-05-19T14:30:09.668Z\",\n    \"updatedAt\": \"2022-06-01T23:00:53.540Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "adduser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/user/create",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "user",
+                    "create"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"username\": \"Steve Treutel II\",\n  \"password\": \"xdv_kIRSCUCjbYz\",\n  \"email\": \"Arne78@gmail.com\",\n  \"name\": \"Ethel Effertz\",\n  \"role\": 1\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "adduser_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/user/create",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "user",
+                        "create"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Steve Treutel II\",\n    \"password\": \"xdv_kIRSCUCjbYz\",\n    \"email\": \"Arne78@gmail.com\",\n    \"name\": \"Ethel Effertz\",\n    \"role\": 1,\n    \"id\": \"612646b92375a3097c7aa669\",\n    \"_id\": \"612646b92375a3097c7aa669\",\n    \"createdAt\": \"2022-03-04T20:36:46.973Z\",\n    \"updatedAt\": \"2022-06-15T15:15:35.202Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "findAlluser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/user/list",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "user",
+                    "list"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": {},\n  \"options\": {\n    \"select\": [\n      \"field 1\",\n      \"field 2\"\n    ],\n    \"collation\": \"\",\n    \"sort\": \"\",\n    \"populate\": \"\",\n    \"projection\": \"\",\n    \"lean\": false,\n    \"leanWithId\": true,\n    \"offset\": 0,\n    \"page\": 1,\n    \"limit\": 10,\n    \"customLabels\": {},\n    \"pagination\": true,\n    \"useEstimatedCount\": false,\n    \"useCustomCountFn\": false,\n    \"forceCountFn\": false,\n    \"read\": {},\n    \"options\": {}\n  },\n  \"isCountOnly\": false\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "findAlluser_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/user/list",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "user",
+                        "list"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"username\": \"Steve Treutel II\",\n        \"password\": \"xdv_kIRSCUCjbYz\",\n        \"email\": \"Arne78@gmail.com\",\n        \"name\": \"Ethel Effertz\",\n        \"role\": 1,\n        \"id\": \"612646b92375a3097c7aa66a\",\n        \"createdAt\": \"2021-12-30T02:29:42.945Z\",\n        \"updatedAt\": \"2022-06-29T13:45:26.375Z\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"_id\": \"612646b92375a3097c7aa66a\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "getuserCount",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/user/count",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "user",
+                    "count"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"where\": {\n    \"isActive\": true\n  }\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "getuserCount_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/user/count",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "user",
+                        "count"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"totalRecords\": 10\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "aggregateuser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/user/aggregate",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "user",
+                    "aggregate"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"group\": {\n    \"avg\": {\n      \"key\": {\n        \"_id\": [\n          \"field1\",\n          \"field2\"\n        ]\n      }\n    },\n    \"sum\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"min\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"max\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"addToSet\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    }\n  },\n  \"match\": {\n    \"key\": {\n      \"field\": \"value\"\n    }\n  },\n  \"project\": {\n    \"gt\": {\n      \"key\": {\n        \"field\": \"value\"\n      }\n    }\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "insertBulkuser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/user/addBulk",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "user",
+                    "addBulk"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": [\n    {\n      \"username\": \"Steve Treutel II\",\n      \"password\": \"xdv_kIRSCUCjbYz\",\n      \"email\": \"Arne78@gmail.com\",\n      \"name\": \"Ethel Effertz\",\n      \"role\": 1\n    }\n  ]\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "adduser_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/user/addBulk",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "user",
+                        "addBulk"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Steve Treutel II\",\n      \"password\": \"xdv_kIRSCUCjbYz\",\n      \"email\": \"Arne78@gmail.com\",\n      \"name\": \"Ethel Effertz\",\n      \"role\": 1,\n      \"id\": \"612646b92375a3097c7aa66e\",\n      \"_id\": \"612646b92375a3097c7aa66e\",\n      \"createdAt\": \"2022-01-30T17:19:59.719Z\",\n      \"updatedAt\": \"2022-04-14T05:23:09.528Z\",\n      \"isDeleted\": false,\n      \"isActive\": true\n    }\n  ]\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateuser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/user/update/:id",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "user",
+                    "update",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"username\": \"Steve Treutel II\",\n  \"password\": \"xdv_kIRSCUCjbYz\",\n  \"email\": \"Arne78@gmail.com\",\n  \"name\": \"Ethel Effertz\",\n  \"role\": 1\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "updateuser_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/user/update/:id",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "user",
+                        "update",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Steve Treutel II\",\n    \"password\": \"xdv_kIRSCUCjbYz\",\n    \"email\": \"Arne78@gmail.com\",\n    \"name\": \"Ethel Effertz\",\n    \"role\": 1,\n    \"id\": \"612646b92375a3097c7aa66c\",\n    \"_id\": \"612646b92375a3097c7aa66c\",\n    \"createdAt\": \"2021-12-22T13:50:17.099Z\",\n    \"updatedAt\": \"2021-12-08T19:16:32.137Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "partialupdateuser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/user/partial-update/:id",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "user",
+                    "partial-update",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isActive\": true,\n  \"isDeleted\": false\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "partialupdateuser_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/user/partial-update/:id",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "user",
+                        "partial-update",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Steve Treutel II\",\n    \"password\": \"xdv_kIRSCUCjbYz\",\n    \"email\": \"Arne78@gmail.com\",\n    \"name\": \"Ethel Effertz\",\n    \"role\": 1,\n    \"id\": \"612646b92375a3097c7aa66d\",\n    \"_id\": \"612646b92375a3097c7aa66d\",\n    \"createdAt\": \"2022-01-06T05:07:52.053Z\",\n    \"updatedAt\": \"2022-07-23T21:26:17.030Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleteuser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/user/softDelete/:id",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "user",
+                    "softDelete",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "softDeleteuser_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/user/softDelete/:id",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "user",
+                        "softDelete",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 1,\n    \"nModified\": 1,\n    \"ok\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleteManyuser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/user/softDeleteMany",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "user",
+                    "softDeleteMany"
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ids\": [\n    \":id\"\n  ]\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "softDeleteManyuser_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/user/softDeleteMany",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "user",
+                        "softDeleteMany"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 2,\n    \"nModified\": 2,\n    \"ok\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateBulkuser",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/user/updateBulk",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "user",
+                    "updateBulk"
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filter\": {\n    \"isActive\": true\n  },\n  \"data\": {\n    \"isDeleted\": false\n  }\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "updateBulkuser_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/user/updateBulk",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "user",
+                        "updateBulk"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Steve Treutel II\",\n      \"password\": \"xdv_kIRSCUCjbYz\",\n      \"email\": \"Arne78@gmail.com\",\n      \"name\": \"Ethel Effertz\",\n      \"role\": 1,\n      \"id\": \"612646b92375a3097c7aa66f\",\n      \"_id\": \"612646b92375a3097c7aa66f\",\n      \"createdAt\": \"2022-05-11T03:50:40.004Z\",\n      \"updatedAt\": \"2021-11-29T13:16:11.998Z\",\n      \"isDeleted\": false,\n      \"isActive\": true\n    }\n  ]\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateProfile",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/user/update-profile",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "user",
+                    "update-profile"
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"username\": \"Steve Treutel II\",\n  \"password\": \"xdv_kIRSCUCjbYz\",\n  \"email\": \"Arne78@gmail.com\",\n  \"name\": \"Ethel Effertz\",\n  \"role\": 1\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "updateProfileuser_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/user/update-profile",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "user",
+                        "update-profile"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Steve Treutel II\",\n      \"password\": \"xdv_kIRSCUCjbYz\",\n      \"email\": \"Arne78@gmail.com\",\n      \"name\": \"Ethel Effertz\",\n      \"role\": 1,\n      \"id\": \"612646b92375a3097c7aa670\",\n      \"_id\": \"612646b92375a3097c7aa670\",\n      \"createdAt\": \"2021-10-18T22:31:40.549Z\",\n      \"updatedAt\": \"2022-03-29T06:14:28.367Z\",\n      \"isDeleted\": false,\n      \"isActive\": true\n    }\n  ]\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            }
+          ]
+        },
+        {
+          "name": "login",
+          "description": "admin Login",
+          "item": [
+            {
+              "name": "Login in admin",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/auth/login",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "auth",
+                    "login"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"username\": \"Your username\",\n  \"password\": \"YourPassword\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "Login in admin_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/auth/login",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "auth",
+                        "login"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Login Successful\",\n  \"data\": {\n    \"username\": \"Steve Treutel II\",\n    \"password\": \"xdv_kIRSCUCjbYz\",\n    \"email\": \"Arne78@gmail.com\",\n    \"name\": \"Ethel Effertz\",\n    \"role\": 1,\n    \"id\": \"612646b92375a3097c7aa671\",\n    \"_id\": \"612646b92375a3097c7aa671\",\n    \"loginRetryLimit\": 0,\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMWRlZDVjMGFjMjAxMmFjMDI4ODkxZiIsInVzZXJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2MjkzNTEyNzAsImV4cCI6MTYyOTk1MTI3MH0.BJ-WKjNYeFDQ4pn8kfli5gwn6GLz_c3voFht20Agj9k\",\n    \"createdAt\": \"2022-01-23T13:52:32.160Z\",\n    \"updatedAt\": \"2021-10-09T19:10:24.311Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Register User in admin",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/auth/register",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "auth",
+                    "register"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"username\": \"Steve Treutel II\",\n  \"password\": \"xdv_kIRSCUCjbYz\",\n  \"email\": \"Arne78@gmail.com\",\n  \"name\": \"Ethel Effertz\",\n  \"role\": 1\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "Register User in admin_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/auth/register",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "auth",
+                        "register"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Steve Treutel II\",\n    \"password\": \"xdv_kIRSCUCjbYz\",\n    \"email\": \"Arne78@gmail.com\",\n    \"name\": \"Ethel Effertz\",\n    \"role\": 1,\n    \"id\": \"612646b92375a3097c7aa671\",\n    \"_id\": \"612646b92375a3097c7aa671\",\n    \"loginRetryLimit\": 0,\n    \"createdAt\": \"2022-04-30T14:46:05.606Z\",\n    \"updatedAt\": \"2022-06-16T13:47:42.309Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Forgot Password in admin",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/auth/forgot-password",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "auth",
+                    "forgot-password"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"email\": \"yourmail@gmail.com\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "Forgot Password in admin_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/auth/forgot-password",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "auth",
+                        "forgot-password"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": \"otp successfully send to your email.\"\n}",
+                  "header": [],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Validate OTP in admin",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/auth/validate-otp",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "auth",
+                    "validate-otp"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"otp\": \"5898\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "Validate OTP in admin_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/auth/validate-otp",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "auth",
+                        "validate-otp"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": \"Invalid OTP\"\n}",
+                  "header": [],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Change Password in admin",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/user/change-password",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "user",
+                    "change-password"
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"oldPassword\": \"YourOldPassword\",\n  \"newPassword\": \"YourNewPassword\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "Change Password in admin_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/user/change-password",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "user",
+                        "change-password"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Password changed successfully\",\n  \"data\": {}\n}",
+                  "header": [],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Reset password in admin",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/auth/reset-password",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "auth",
+                    "reset-password"
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"code\": \"5898\",\n  \"newPassword\": \"yourPassword\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "Reset password in admin_response~",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/auth/reset-password",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "auth",
+                        "reset-password"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": \"Password reset successfully\"\n}",
+                  "header": [],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            }
+          ]
+        },
+        {
+          "name": "role",
+          "description": "role Model APIs",
+          "item": [
+            {
+              "name": "getrole",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/role/:id",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "role",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "getrole_response",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/role/:id",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "role",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Gayle McCullough\",\n    \"code\": \"4th\",\n    \"weight\": 824,\n    \"id\": \"612646b92375a3097c7aa676\",\n    \"_id\": \"612646b92375a3097c7aa676\",\n    \"createdAt\": \"2022-03-15T06:47:15.400Z\",\n    \"updatedAt\": \"2022-04-17T23:02:42.651Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "addrole",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/role/create",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "role",
+                    "create"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Gayle McCullough\",\n  \"code\": \"4th\",\n  \"weight\": 824\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "addrole_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/role/create",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "role",
+                        "create"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Gayle McCullough\",\n    \"code\": \"4th\",\n    \"weight\": 824,\n    \"id\": \"612646b92375a3097c7aa673\",\n    \"_id\": \"612646b92375a3097c7aa673\",\n    \"createdAt\": \"2022-04-16T03:45:28.869Z\",\n    \"updatedAt\": \"2021-12-05T03:19:53.454Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "insertBulkrole",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/role/addBulk",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "role",
+                    "addBulk"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": [\n    {\n      \"name\": \"Gayle McCullough\",\n      \"code\": \"4th\",\n      \"weight\": 824\n    }\n  ]\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "addrole_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/role/addBulk",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "role",
+                        "addBulk"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"name\": \"Gayle McCullough\",\n      \"code\": \"4th\",\n      \"weight\": 824,\n      \"id\": \"612646b92375a3097c7aa674\",\n      \"_id\": \"612646b92375a3097c7aa674\",\n      \"createdAt\": \"2022-01-05T15:18:11.357Z\",\n      \"updatedAt\": \"2022-04-15T08:13:31.434Z\",\n      \"isDeleted\": false,\n      \"isActive\": true\n    }\n  ]\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "findAllrole",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/role/list",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "role",
+                    "list"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": {},\n  \"options\": {\n    \"select\": [\n      \"field 1\",\n      \"field 2\"\n    ],\n    \"collation\": \"\",\n    \"sort\": \"\",\n    \"populate\": \"\",\n    \"projection\": \"\",\n    \"lean\": false,\n    \"leanWithId\": true,\n    \"offset\": 0,\n    \"page\": 1,\n    \"limit\": 10,\n    \"customLabels\": {},\n    \"pagination\": true,\n    \"useEstimatedCount\": false,\n    \"useCustomCountFn\": false,\n    \"forceCountFn\": false,\n    \"read\": {},\n    \"options\": {}\n  },\n  \"isCountOnly\": false\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "findAllrole_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/role/list",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "role",
+                        "list"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"name\": \"Gayle McCullough\",\n        \"code\": \"4th\",\n        \"weight\": 824,\n        \"id\": \"612646b92375a3097c7aa675\",\n        \"createdAt\": \"2022-01-21T07:16:55.550Z\",\n        \"updatedAt\": \"2021-10-27T18:37:58.860Z\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"_id\": \"612646b92375a3097c7aa675\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "aggregaterole",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/role/aggregate",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "role",
+                    "aggregate"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"group\": {\n    \"avg\": {\n      \"key\": {\n        \"_id\": [\n          \"field1\",\n          \"field2\"\n        ]\n      }\n    },\n    \"sum\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"min\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"max\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"addToSet\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    }\n  },\n  \"match\": {\n    \"key\": {\n      \"field\": \"value\"\n    }\n  },\n  \"project\": {\n    \"gt\": {\n      \"key\": {\n        \"field\": \"value\"\n      }\n    }\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "getroleCount",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/role/count",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "role",
+                    "count"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"where\": {\n    \"isActive\": true\n  }\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "getroleCount_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/role/count",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "role",
+                        "count"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"totalRecords\": 10\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "upsertForInsertrole",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/role/upsert",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "role",
+                    "upsert"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Gayle McCullough\",\n  \"code\": \"4th\",\n  \"weight\": 824\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "upsertForInsertrole_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/role/upsert",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "role",
+                        "upsert"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 1,\n    \"nModified\": 1,\n    \"ok\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "upsertForUpdaterole",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/role/upsert",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "role",
+                    "upsert"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Gayle McCullough\",\n  \"code\": \"4th\",\n  \"weight\": 824,\n  \"id\": \"612646b92375a3097c7aa679\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "upsertForInsertrole_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/role/upsert",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "role",
+                        "upsert"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 1,\n    \"nModified\": 1,\n    \"ok\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "partialupdaterole",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/role/partial-update/:id",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "role",
+                    "partial-update",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isActive\": true,\n  \"isDeleted\": false\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "partialupdaterole_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/role/partial-update/:id",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "role",
+                        "partial-update",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Gayle McCullough\",\n    \"code\": \"4th\",\n    \"weight\": 824,\n    \"id\": \"612646b92375a3097c7aa677\",\n    \"_id\": \"612646b92375a3097c7aa677\",\n    \"createdAt\": \"2022-05-29T01:59:21.467Z\",\n    \"updatedAt\": \"2021-12-13T01:00:06.919Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleterole",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/role/softDelete/:id",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "role",
+                    "softDelete",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "softDeleterole_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/role/softDelete/:id",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "role",
+                        "softDelete",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 1,\n    \"nModified\": 1,\n    \"ok\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updaterole",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/role/update/:id",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "role",
+                    "update",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Gayle McCullough\",\n  \"code\": \"4th\",\n  \"weight\": 824\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "updaterole_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/role/update/:id",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "role",
+                        "update",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Gayle McCullough\",\n    \"code\": \"4th\",\n    \"weight\": 824,\n    \"id\": \"612646b92375a3097c7aa678\",\n    \"_id\": \"612646b92375a3097c7aa678\",\n    \"createdAt\": \"2022-07-14T02:24:28.805Z\",\n    \"updatedAt\": \"2022-04-28T10:39:57.292Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            }
+          ]
+        },
+        {
+          "name": "projectRoute",
+          "description": "projectRoute Model APIs",
+          "item": [
+            {
+              "name": "getprojectRoute",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/projectroute/:id",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "projectroute",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "getprojectRoute_response",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/projectroute/:id",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "projectroute",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"route_name\": \"Research\",\n    \"method\": \"applications\",\n    \"uri\": \"purple\",\n    \"id\": \"612646b92375a3097c7aa67e\",\n    \"_id\": \"612646b92375a3097c7aa67e\",\n    \"createdAt\": \"2021-09-04T07:49:22.749Z\",\n    \"updatedAt\": \"2022-01-08T08:48:24.547Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "addprojectRoute",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/projectroute/create",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "projectroute",
+                    "create"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"route_name\": \"Research\",\n  \"method\": \"applications\",\n  \"uri\": \"purple\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "addprojectRoute_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/projectroute/create",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "projectroute",
+                        "create"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"route_name\": \"Research\",\n    \"method\": \"applications\",\n    \"uri\": \"purple\",\n    \"id\": \"612646b92375a3097c7aa67b\",\n    \"_id\": \"612646b92375a3097c7aa67b\",\n    \"createdAt\": \"2022-03-19T01:27:54.130Z\",\n    \"updatedAt\": \"2022-04-13T01:04:55.504Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "insertBulkprojectRoute",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/projectroute/addBulk",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "projectroute",
+                    "addBulk"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": [\n    {\n      \"route_name\": \"Research\",\n      \"method\": \"applications\",\n      \"uri\": \"purple\"\n    }\n  ]\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "addprojectRoute_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/projectroute/addBulk",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "projectroute",
+                        "addBulk"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"route_name\": \"Research\",\n      \"method\": \"applications\",\n      \"uri\": \"purple\",\n      \"id\": \"612646b92375a3097c7aa67c\",\n      \"_id\": \"612646b92375a3097c7aa67c\",\n      \"createdAt\": \"2022-04-11T20:44:48.738Z\",\n      \"updatedAt\": \"2022-02-09T19:12:58.771Z\",\n      \"isDeleted\": false,\n      \"isActive\": true\n    }\n  ]\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "findAllprojectRoute",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/projectroute/list",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "projectroute",
+                    "list"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": {},\n  \"options\": {\n    \"select\": [\n      \"field 1\",\n      \"field 2\"\n    ],\n    \"collation\": \"\",\n    \"sort\": \"\",\n    \"populate\": \"\",\n    \"projection\": \"\",\n    \"lean\": false,\n    \"leanWithId\": true,\n    \"offset\": 0,\n    \"page\": 1,\n    \"limit\": 10,\n    \"customLabels\": {},\n    \"pagination\": true,\n    \"useEstimatedCount\": false,\n    \"useCustomCountFn\": false,\n    \"forceCountFn\": false,\n    \"read\": {},\n    \"options\": {}\n  },\n  \"isCountOnly\": false\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "findAllprojectRoute_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/projectroute/list",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "projectroute",
+                        "list"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"route_name\": \"Research\",\n        \"method\": \"applications\",\n        \"uri\": \"purple\",\n        \"id\": \"612646b92375a3097c7aa67d\",\n        \"createdAt\": \"2021-09-07T15:58:54.096Z\",\n        \"updatedAt\": \"2021-09-09T17:02:25.707Z\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"_id\": \"612646b92375a3097c7aa67d\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "aggregateprojectRoute",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/projectroute/aggregate",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "projectroute",
+                    "aggregate"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"group\": {\n    \"avg\": {\n      \"key\": {\n        \"_id\": [\n          \"field1\",\n          \"field2\"\n        ]\n      }\n    },\n    \"sum\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"min\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"max\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"addToSet\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    }\n  },\n  \"match\": {\n    \"key\": {\n      \"field\": \"value\"\n    }\n  },\n  \"project\": {\n    \"gt\": {\n      \"key\": {\n        \"field\": \"value\"\n      }\n    }\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "getprojectRouteCount",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/projectroute/count",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "projectroute",
+                    "count"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"where\": {\n    \"isActive\": true\n  }\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "getprojectRouteCount_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/projectroute/count",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "projectroute",
+                        "count"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"totalRecords\": 10\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "upsertForInsertprojectRoute",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/projectroute/upsert",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "projectroute",
+                    "upsert"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"route_name\": \"Research\",\n  \"method\": \"applications\",\n  \"uri\": \"purple\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "upsertForInsertprojectRoute_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/projectroute/upsert",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "projectroute",
+                        "upsert"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 1,\n    \"nModified\": 1,\n    \"ok\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "upsertForUpdateprojectRoute",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/projectroute/upsert",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "projectroute",
+                    "upsert"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"route_name\": \"Research\",\n  \"method\": \"applications\",\n  \"uri\": \"purple\",\n  \"id\": \"612646b92375a3097c7aa681\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "upsertForInsertprojectRoute_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/projectroute/upsert",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "projectroute",
+                        "upsert"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 1,\n    \"nModified\": 1,\n    \"ok\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "partialupdateprojectRoute",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/projectroute/partial-update/:id",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "projectroute",
+                    "partial-update",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isActive\": true,\n  \"isDeleted\": false\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "partialupdateprojectRoute_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/projectroute/partial-update/:id",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "projectroute",
+                        "partial-update",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"route_name\": \"Research\",\n    \"method\": \"applications\",\n    \"uri\": \"purple\",\n    \"id\": \"612646b92375a3097c7aa67f\",\n    \"_id\": \"612646b92375a3097c7aa67f\",\n    \"createdAt\": \"2021-10-23T01:16:02.313Z\",\n    \"updatedAt\": \"2022-03-09T20:07:21.522Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleteprojectRoute",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/projectroute/softDelete/:id",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "projectroute",
+                    "softDelete",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "softDeleteprojectRoute_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/projectroute/softDelete/:id",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "projectroute",
+                        "softDelete",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 1,\n    \"nModified\": 1,\n    \"ok\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateprojectRoute",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/projectroute/update/:id",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "projectroute",
+                    "update",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"route_name\": \"Research\",\n  \"method\": \"applications\",\n  \"uri\": \"purple\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "updateprojectRoute_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/projectroute/update/:id",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "projectroute",
+                        "update",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"route_name\": \"Research\",\n    \"method\": \"applications\",\n    \"uri\": \"purple\",\n    \"id\": \"612646b92375a3097c7aa680\",\n    \"_id\": \"612646b92375a3097c7aa680\",\n    \"createdAt\": \"2022-07-22T17:06:41.821Z\",\n    \"updatedAt\": \"2022-07-04T09:04:58.503Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            }
+          ]
+        },
+        {
+          "name": "routeRole",
+          "description": "routeRole Model APIs",
+          "item": [
+            {
+              "name": "getrouteRole",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/routerole/:id",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "routerole",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "getrouteRole_response",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/routerole/:id",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "routerole",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"routeId\": \"612646b92375a3097c7aa682\",\n    \"roleId\": \"612646b92375a3097c7aa683\",\n    \"id\": \"612646b92375a3097c7aa688\",\n    \"_id\": \"612646b92375a3097c7aa688\",\n    \"createdAt\": \"2021-12-05T16:57:23.488Z\",\n    \"updatedAt\": \"2022-01-29T13:22:45.143Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "addrouteRole",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/routerole/create",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "routerole",
+                    "create"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"routeId\": \"612646b92375a3097c7aa682\",\n  \"roleId\": \"612646b92375a3097c7aa683\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "addrouteRole_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/routerole/create",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "routerole",
+                        "create"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"routeId\": \"612646b92375a3097c7aa682\",\n    \"roleId\": \"612646b92375a3097c7aa683\",\n    \"id\": \"612646b92375a3097c7aa685\",\n    \"_id\": \"612646b92375a3097c7aa685\",\n    \"createdAt\": \"2021-09-30T10:56:03.714Z\",\n    \"updatedAt\": \"2021-10-18T17:41:32.273Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "insertBulkrouteRole",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/routerole/addBulk",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "routerole",
+                    "addBulk"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": [\n    {\n      \"routeId\": \"612646b92375a3097c7aa682\",\n      \"roleId\": \"612646b92375a3097c7aa683\"\n    }\n  ]\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "addrouteRole_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/routerole/addBulk",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "routerole",
+                        "addBulk"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"routeId\": \"612646b92375a3097c7aa682\",\n      \"roleId\": \"612646b92375a3097c7aa683\",\n      \"id\": \"612646b92375a3097c7aa686\",\n      \"_id\": \"612646b92375a3097c7aa686\",\n      \"createdAt\": \"2022-07-20T02:54:02.833Z\",\n      \"updatedAt\": \"2022-08-01T19:21:29.633Z\",\n      \"isDeleted\": false,\n      \"isActive\": true\n    }\n  ]\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "findAllrouteRole",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/routerole/list",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "routerole",
+                    "list"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": {},\n  \"options\": {\n    \"select\": [\n      \"field 1\",\n      \"field 2\"\n    ],\n    \"collation\": \"\",\n    \"sort\": \"\",\n    \"populate\": \"\",\n    \"projection\": \"\",\n    \"lean\": false,\n    \"leanWithId\": true,\n    \"offset\": 0,\n    \"page\": 1,\n    \"limit\": 10,\n    \"customLabels\": {},\n    \"pagination\": true,\n    \"useEstimatedCount\": false,\n    \"useCustomCountFn\": false,\n    \"forceCountFn\": false,\n    \"read\": {},\n    \"options\": {}\n  },\n  \"isCountOnly\": false\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "findAllrouteRole_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/routerole/list",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "routerole",
+                        "list"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"routeId\": \"612646b92375a3097c7aa682\",\n        \"roleId\": \"612646b92375a3097c7aa683\",\n        \"id\": \"612646b92375a3097c7aa687\",\n        \"createdAt\": \"2021-12-28T05:06:05.840Z\",\n        \"updatedAt\": \"2022-08-17T04:48:16.765Z\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"_id\": \"612646b92375a3097c7aa687\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "aggregaterouteRole",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/routerole/aggregate",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "routerole",
+                    "aggregate"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"group\": {\n    \"avg\": {\n      \"key\": {\n        \"_id\": [\n          \"field1\",\n          \"field2\"\n        ]\n      }\n    },\n    \"sum\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"min\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"max\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"addToSet\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    }\n  },\n  \"match\": {\n    \"key\": {\n      \"field\": \"value\"\n    }\n  },\n  \"project\": {\n    \"gt\": {\n      \"key\": {\n        \"field\": \"value\"\n      }\n    }\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "getrouteRoleCount",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/routerole/count",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "routerole",
+                    "count"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"where\": {\n    \"isActive\": true\n  }\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "getrouteRoleCount_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/routerole/count",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "routerole",
+                        "count"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"totalRecords\": 10\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "upsertForInsertrouteRole",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/routerole/upsert",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "routerole",
+                    "upsert"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"routeId\": \"612646b92375a3097c7aa682\",\n  \"roleId\": \"612646b92375a3097c7aa683\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "upsertForInsertrouteRole_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/routerole/upsert",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "routerole",
+                        "upsert"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 1,\n    \"nModified\": 1,\n    \"ok\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "upsertForUpdaterouteRole",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/routerole/upsert",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "routerole",
+                    "upsert"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"routeId\": \"612646b92375a3097c7aa682\",\n  \"roleId\": \"612646b92375a3097c7aa683\",\n  \"id\": \"612646b92375a3097c7aa68b\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "upsertForInsertrouteRole_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/routerole/upsert",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "routerole",
+                        "upsert"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 1,\n    \"nModified\": 1,\n    \"ok\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "partialupdaterouteRole",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/routerole/partial-update/:id",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "routerole",
+                    "partial-update",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isActive\": true,\n  \"isDeleted\": false\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "partialupdaterouteRole_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/routerole/partial-update/:id",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "routerole",
+                        "partial-update",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"routeId\": \"612646b92375a3097c7aa682\",\n    \"roleId\": \"612646b92375a3097c7aa683\",\n    \"id\": \"612646b92375a3097c7aa689\",\n    \"_id\": \"612646b92375a3097c7aa689\",\n    \"createdAt\": \"2022-07-27T16:02:49.313Z\",\n    \"updatedAt\": \"2021-10-14T16:41:51.448Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updaterouteRole",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/routerole/update/:id",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "routerole",
+                    "update",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"routeId\": \"612646b92375a3097c7aa682\",\n  \"roleId\": \"612646b92375a3097c7aa683\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "updaterouteRole_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/routerole/update/:id",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "routerole",
+                        "update",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"routeId\": \"612646b92375a3097c7aa682\",\n    \"roleId\": \"612646b92375a3097c7aa683\",\n    \"id\": \"612646b92375a3097c7aa68a\",\n    \"_id\": \"612646b92375a3097c7aa68a\",\n    \"createdAt\": \"2022-01-29T11:57:35.303Z\",\n    \"updatedAt\": \"2022-06-15T00:12:12.126Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleterouteRole",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/routerole/softDelete/:id",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "routerole",
+                    "softDelete",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "softDeleterouteRole_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/routerole/softDelete/:id",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "routerole",
+                        "softDelete",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 1,\n    \"nModified\": 1,\n    \"ok\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            }
+          ]
+        },
+        {
+          "name": "userRole",
+          "description": "userRole Model APIs",
+          "item": [
+            {
+              "name": "getuserRole",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/userrole/:id",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "userrole",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "getuserRole_response",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/userrole/:id",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "userrole",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"userId\": \"612646b92375a3097c7aa68c\",\n    \"roleId\": \"612646b92375a3097c7aa68d\",\n    \"id\": \"612646b92375a3097c7aa692\",\n    \"_id\": \"612646b92375a3097c7aa692\",\n    \"createdAt\": \"2022-01-31T08:57:16.926Z\",\n    \"updatedAt\": \"2021-10-10T19:48:50.679Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "adduserRole",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/userrole/create",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "userrole",
+                    "create"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"userId\": \"612646b92375a3097c7aa68c\",\n  \"roleId\": \"612646b92375a3097c7aa68d\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "adduserRole_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/userrole/create",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "userrole",
+                        "create"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"userId\": \"612646b92375a3097c7aa68c\",\n    \"roleId\": \"612646b92375a3097c7aa68d\",\n    \"id\": \"612646b92375a3097c7aa68f\",\n    \"_id\": \"612646b92375a3097c7aa68f\",\n    \"createdAt\": \"2022-02-01T09:24:17.301Z\",\n    \"updatedAt\": \"2021-10-08T23:56:14.923Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "insertBulkuserRole",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/userrole/addBulk",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "userrole",
+                    "addBulk"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": [\n    {\n      \"userId\": \"612646b92375a3097c7aa68c\",\n      \"roleId\": \"612646b92375a3097c7aa68d\"\n    }\n  ]\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "adduserRole_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/userrole/addBulk",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "userrole",
+                        "addBulk"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"userId\": \"612646b92375a3097c7aa68c\",\n      \"roleId\": \"612646b92375a3097c7aa68d\",\n      \"id\": \"612646b92375a3097c7aa690\",\n      \"_id\": \"612646b92375a3097c7aa690\",\n      \"createdAt\": \"2022-02-06T15:25:38.335Z\",\n      \"updatedAt\": \"2022-01-28T16:57:15.549Z\",\n      \"isDeleted\": false,\n      \"isActive\": true\n    }\n  ]\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "findAlluserRole",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/userrole/list",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "userrole",
+                    "list"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": {},\n  \"options\": {\n    \"select\": [\n      \"field 1\",\n      \"field 2\"\n    ],\n    \"collation\": \"\",\n    \"sort\": \"\",\n    \"populate\": \"\",\n    \"projection\": \"\",\n    \"lean\": false,\n    \"leanWithId\": true,\n    \"offset\": 0,\n    \"page\": 1,\n    \"limit\": 10,\n    \"customLabels\": {},\n    \"pagination\": true,\n    \"useEstimatedCount\": false,\n    \"useCustomCountFn\": false,\n    \"forceCountFn\": false,\n    \"read\": {},\n    \"options\": {}\n  },\n  \"isCountOnly\": false\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "findAlluserRole_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/userrole/list",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "userrole",
+                        "list"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"userId\": \"612646b92375a3097c7aa68c\",\n        \"roleId\": \"612646b92375a3097c7aa68d\",\n        \"id\": \"612646b92375a3097c7aa691\",\n        \"createdAt\": \"2022-04-07T09:53:01.677Z\",\n        \"updatedAt\": \"2022-07-05T13:34:42.800Z\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"_id\": \"612646b92375a3097c7aa691\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "aggregateuserRole",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/userrole/aggregate",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "userrole",
+                    "aggregate"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"group\": {\n    \"avg\": {\n      \"key\": {\n        \"_id\": [\n          \"field1\",\n          \"field2\"\n        ]\n      }\n    },\n    \"sum\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"min\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"max\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"addToSet\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    }\n  },\n  \"match\": {\n    \"key\": {\n      \"field\": \"value\"\n    }\n  },\n  \"project\": {\n    \"gt\": {\n      \"key\": {\n        \"field\": \"value\"\n      }\n    }\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "getuserRoleCount",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/userrole/count",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "userrole",
+                    "count"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"where\": {\n    \"isActive\": true\n  }\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "getuserRoleCount_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/userrole/count",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "userrole",
+                        "count"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"totalRecords\": 10\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "upsertForInsertuserRole",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/userrole/upsert",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "userrole",
+                    "upsert"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"userId\": \"612646b92375a3097c7aa68c\",\n  \"roleId\": \"612646b92375a3097c7aa68d\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "upsertForInsertuserRole_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/userrole/upsert",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "userrole",
+                        "upsert"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 1,\n    \"nModified\": 1,\n    \"ok\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "upsertForUpdateuserRole",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/userrole/upsert",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "userrole",
+                    "upsert"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"userId\": \"612646b92375a3097c7aa68c\",\n  \"roleId\": \"612646b92375a3097c7aa68d\",\n  \"id\": \"612646b92375a3097c7aa695\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "upsertForInsertuserRole_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/userrole/upsert",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "userrole",
+                        "upsert"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 1,\n    \"nModified\": 1,\n    \"ok\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "partialupdateuserRole",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/userrole/partial-update/:id",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "userrole",
+                    "partial-update",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isActive\": true,\n  \"isDeleted\": false\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "partialupdateuserRole_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/userrole/partial-update/:id",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "userrole",
+                        "partial-update",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"userId\": \"612646b92375a3097c7aa68c\",\n    \"roleId\": \"612646b92375a3097c7aa68d\",\n    \"id\": \"612646b92375a3097c7aa693\",\n    \"_id\": \"612646b92375a3097c7aa693\",\n    \"createdAt\": \"2021-12-22T05:27:12.434Z\",\n    \"updatedAt\": \"2021-11-21T13:02:30.394Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateuserRole",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/userrole/update/:id",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "userrole",
+                    "update",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"userId\": \"612646b92375a3097c7aa68c\",\n  \"roleId\": \"612646b92375a3097c7aa68d\"\n}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "updateuserRole_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/userrole/update/:id",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "userrole",
+                        "update",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"userId\": \"612646b92375a3097c7aa68c\",\n    \"roleId\": \"612646b92375a3097c7aa68d\",\n    \"id\": \"612646b92375a3097c7aa694\",\n    \"_id\": \"612646b92375a3097c7aa694\",\n    \"createdAt\": \"2022-08-07T12:32:47.303Z\",\n    \"updatedAt\": \"2021-10-05T16:47:48.198Z\",\n    \"isDeleted\": false,\n    \"isActive\": true\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleteuserRole",
+              "request": {
+                "url": {
+                  "raw": "{{url}}admin/userrole/softDelete/:id",
+                  "host": [
+                    "{{url}}admin"
+                  ],
+                  "path": [
+                    "userrole",
+                    "softDelete",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "response": [
+                {
+                  "name": "softDeleteuserRole_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}admin/userrole/softDelete/:id",
+                      "host": [
+                        "{{url}}admin"
+                      ],
+                      "path": [
+                        "userrole",
+                        "softDelete",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 1,\n    \"nModified\": 1,\n    \"ok\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
